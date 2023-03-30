@@ -23,7 +23,7 @@ function Profile() {
 
       tweetsIds.forEach((id: number) => {
         const findTweet = getTweets.find((tweet: TweetCard) => tweet.id === id);
-        newTweets = [...newTweets, findTweet]
+        newTweets = [...newTweets, findTweet];
       })
 
       setTweets(newTweets);

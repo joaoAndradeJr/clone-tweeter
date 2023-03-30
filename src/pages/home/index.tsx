@@ -4,7 +4,7 @@ import { fetchTweets } from '../../utils/fetch';
 import Tweet from '../../components/tweet';
 
 function Home() {
-  const [tweets, setTweets] = useState<TweetCard[] | []>([])
+  const [tweets, setTweets] = useState<TweetCard[]>([])
 
   useEffect(() => {
     const getData = async () => {
