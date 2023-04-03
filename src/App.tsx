@@ -7,9 +7,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={ <Layout /> }>
-        <Route path="" element={<Home />} />
+        <Route path="" element={ <Home /> } />
         <Route path="/profile/:username" element={ <Profile /> } />
       </Route>
+      {/* <Route path="*" element={ <NotFound /> }/> */}
     </Routes>
   )
 }

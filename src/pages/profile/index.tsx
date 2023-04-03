@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Tweet from "../../components/tweet";
 import { fetchTweets, fetchUsers } from "../../utils/fetch";
 import { Users, TweetCard } from "../../utils/types";
@@ -13,22 +13,24 @@ function Profile() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const getUsers = await fetchUsers();
-      const findUser = getUsers.find((user: Users) => user.username === username)
-
-      const getTweets = await fetchTweets();
-      const tweetsIds = findUser.tweetsId;
-
-      let newTweets: TweetCard[] = []
-
-      tweetsIds.forEach((id: number) => {
-        const findTweet = getTweets.find((tweet: TweetCard) => tweet.id === id);
-        newTweets = [...newTweets, findTweet];
-      })
-
-      setTweets(newTweets);
+      const usersResponse = await fetchUsers();
+      const findUser = usersResponse.find((user: Users) => user.username === username)
+      
+      if (findUser) {
+        const getTweets = await fetchTweets();
+        const tweetsIds = findUser.tweetsId;
+  
+        let newTweets: TweetCard[] = []
+  
+        tweetsIds.forEach((id: number) => {
+          const findTweet = getTweets.find((tweet: TweetCard) => tweet.id === id);
+          newTweets = [...newTweets, findTweet];
+        })
+        setTweets(newTweets);
+        setUser(findUser);
+      }
+  
       setLoading(false);
-      setUser(findUser);
     }
 
     fetchData();
@@ -37,6 +39,15 @@ function Profile() {
   if (loading) return (
     <h1>Carregando...</h1>
   )
+
+  if (!user) {
+    return (
+      <>
+        <h1>Usuário não encontrado</h1>
+        <Link to="/">Voltar para a página inicial</Link>
+      </>
+    )
+  }
 
   return (
     <div className="profile-page">

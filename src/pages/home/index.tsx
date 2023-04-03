@@ -5,14 +5,22 @@ import Tweet from '../../components/tweet';
 
 function Home() {
   const [tweets, setTweets] = useState<TweetCard[]>([])
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
       const data = await fetchTweets();
-      setTweets(data)
+      setTweets(data);
+      setLoading(false);
     }
     getData();
   }, []);
+
+  if (loading) {
+    return (
+      <h1>Carregando...</h1>
+    )
+  }
 
   return (
     <div className="home-page">
