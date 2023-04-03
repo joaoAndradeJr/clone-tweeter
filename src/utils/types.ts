@@ -7,7 +7,7 @@ export type TweetCard = {
   },
   commentsCount: number,
   tweet: string,
-}
+};
 
 export type Users = {
   id: number,
@@ -18,4 +18,5 @@ export type Users = {
   tweetsId: number[],
   following: number,
   followers: number,
-}
+  bio: string,
+};

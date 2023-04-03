@@ -56,11 +56,11 @@ function Profile() {
   return (
     <div className="profile-page">
       <div>
-        <img src={ user?.backgroundPicture } alt={ `${user.username} background` } />
-        <img src={ user?.profilePicture } alt={ user?.username } />
-        <span>{ user?.name }</span>
-        <span>{ `@${user?.username}`}</span>
-        {/* <p>{bio}</p> */}
+        <img src={ user.backgroundPicture } alt={ `${user.username} background` } />
+        <img src={ user.profilePicture } alt={ user.username } />
+        <span>{ user.name }</span>
+        <span>{ `@${user.username}`}</span>
+        <p>{ user.bio }</p>
       </div>
       <div className="tweet-list">
         {
