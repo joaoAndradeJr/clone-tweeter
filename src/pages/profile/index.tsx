@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Tweet from '../../components/tweet';
 import { fetchTweets, fetchUsers } from '../../utils/fetch';
 import { Users, TweetCard } from '../../utils/types';
+import './profile.css';
 
 function Profile() {
   const [user, setUser] = useState<Users | null>(null);
@@ -46,21 +47,31 @@ function Profile() {
 
   if (!user) {
     return (
-      <>
+      <div className="profile-page">
         <h1>Usuário não encontrado</h1>
         <Link to="/">Voltar para a página inicial</Link>
-      </>
+      </div>
     );
   }
 
   return (
     <div className="profile-page">
-      <div>
-        <img src={ user.backgroundPicture } alt={ `${user.username} background` } />
-        <img src={ user.profilePicture } alt={ user.username } />
-        <span>{ user.name }</span>
-        <span>{ `@${user.username}`}</span>
-        <p>{ user.bio }</p>
+      <div className="profile-container">
+        <img
+          className="cover-profile"
+          src={ user.backgroundPicture }
+          alt={ `${user.username} background` }
+        />
+        <img
+          className="avatar-profile"
+          src={ user.profilePicture }
+          alt={ user.username }
+        />
+        <div className="bio-container">
+          <h2>{ user.name }</h2>
+          <span className="span-bio">{ `@${user.username}`}</span>
+          <p>{ user.bio }</p>
+        </div>
       </div>
       <div className="tweet-list">
         {

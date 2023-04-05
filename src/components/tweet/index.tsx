@@ -11,12 +11,14 @@ type TweetProps = {
 function Tweet({ image, username, name, tweet }: TweetProps) {
   return (
     <div className="tweet-card">
-      <img src={ image } alt={ username } />
-      <span>{ name }</span>
-      <Link to={ `/profile/${username}` }>
-        <span>{ username }</span>
-      </Link>
-      <p>{tweet}</p>
+      <div className="user-img">
+        <img src={ image } alt={ username } />
+      </div>
+      <div className="user-info">
+        <span className="info-name">{ name }</span>
+        <span><Link to={ `/profile/${username}` }>{ `@${username}` }</Link></span>
+        <p>{tweet}</p>
+      </div>
     </div>
   );
 }

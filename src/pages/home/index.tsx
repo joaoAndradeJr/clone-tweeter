@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { TweetCard } from '../../utils/types';
 import { fetchTweets } from '../../utils/fetch';
 import Tweet from '../../components/tweet';
+import './home.css';
 
 function Home() {
   const [tweets, setTweets] = useState<TweetCard[]>([]);
