@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { FaRegComment, FaRegHeart } from 'react-icons/fa';
+import { AiOutlineRetweet } from 'react-icons/ai';
 import './tweet.css';
 
 type TweetProps = {
@@ -6,17 +8,30 @@ type TweetProps = {
   username: string,
   name: string,
   tweet: string,
+  comments: number,
+  retweets: number,
+  likes: number,
 };
 
-function Tweet({ image, username, name, tweet }: TweetProps) {
+function Tweet({ image, username, name, tweet, comments, retweets, likes }: TweetProps) {
   return (
     <div className="tweet-card">
-      <img src={ image } alt={ username } />
-      <span>{ name }</span>
-      <Link to={ `/profile/${username}` }>
-        <span>{ username }</span>
-      </Link>
-      <p>{tweet}</p>
+      <div className="user-img">
+        <img src={ image } alt={ username } />
+      </div>
+      <div className="user-info">
+        <span className="info-name">{ name }</span>
+        <span><Link to={ `/profile/${username}` }>{ `@${username}` }</Link></span>
+        <p>{tweet}</p>
+        <div className="interaction-container">
+          <FaRegComment />
+          <span>{ comments }</span>
+          <AiOutlineRetweet />
+          <span>{ retweets }</span>
+          <FaRegHeart />
+          <span>{ likes }</span>
+        </div>
+      </div>
     </div>
   );
 }
