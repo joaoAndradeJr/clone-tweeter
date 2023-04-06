@@ -1,6 +1,11 @@
+import './not-found.css';
+
 function NotFound() {
   return (
-    <h1>Página não encontrada...</h1>
+    <div className="not-found">
+      <h1>404</h1>
+      Ih, esta página não existe. Tente buscar outra coisa.
+    </div>
   );
 }
 

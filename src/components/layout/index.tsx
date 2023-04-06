@@ -21,6 +21,7 @@ function Layout() {
           <img width="30" src="/src/assets/user.png" alt="icon" />
           Meu Perfil
         </NavLink>
+        <button>Tweetar</button>
       </nav>
       <main>
         <Outlet />

@@ -26,6 +26,27 @@ main {
 	margin-top: -2px;
 }
 
+.nav button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+	color: white;
+	text-align: center;
+	margin: 40px 0px 0px 12px;
+	padding: 10px 15px;
+	border-radius: 30%;
+	border-radius: 25px;
+    background: #1EB71F;
+	cursor: pointer;
+	width: 220px;
+}
+
+.nav button:hover {
+ cursor: pointer;
+ background-color: #138b13;
+ transition: 1ms;
+}
+
 .nav a {
 	display: flex;
 	text-decoration: none;

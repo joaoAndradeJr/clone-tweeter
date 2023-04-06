@@ -32,3 +32,25 @@
   text-decoration: none;
   color: #8f8e8e;
 }
+
+.interaction-container {
+  display: flex;
+  align-items: center;
+}
+
+.interaction-container span {
+  padding: 5px;
+  cursor: pointer;
+  color:#585858;
+  margin-right: 30px;
+}
+
+.interaction-container span:hover, .interaction-container svg:hover {
+  cursor: pointer;
+  color: #8f8e8e;
+}
+
+.interaction-container svg {
+  cursor: pointer;
+  color:#585858;
+}

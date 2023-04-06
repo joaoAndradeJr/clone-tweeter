@@ -41,7 +41,13 @@ function Profile() {
 
   if (loading) {
     return (
-      <h1>Carregando...</h1>
+      <div className="loading-page">
+        <img
+          width="100"
+          src="https://thumbs.gfycat.com/CorruptOldfashionedGuineapig-max-1mb.gif"
+          alt="carregando"
+        />
+      </div>
     );
   }
 
@@ -82,6 +88,9 @@ function Profile() {
               username={ tweet.owner.username }
               name={ tweet.owner.name }
               tweet={ tweet.tweet }
+              comments={ tweet.commentsCount }
+              likes={ tweet.likesCount }
+              retweets={ tweet.retweetsCount }
             />
           ))
         }
