@@ -12,12 +12,14 @@
     position: relative;
 }
 
+/* Classe utilizada no elemento que renderiza a imagem do plano de fundo do perfil */
 .cover-profile {
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
 
+/* Classe utilizada no elemento que renderiza a imagem do perfil */
 .avatar-profile {
     position: absolute;
     width: 200px;
@@ -42,6 +44,7 @@
     font-size: 18px;
 }
 
+/* Classe utilizada no elemento que renderiza o username */
 .span-bio {
     color: #807e7e;
     display: block;
