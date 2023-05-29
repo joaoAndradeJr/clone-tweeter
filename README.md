@@ -47,6 +47,29 @@ Esse componente será o responsável por renderizar as informações da rota `/`
 
 - Para renderizar os _tweets_, você deverá utilizar o componente `Tweet`, que está no arquivo `src/components/tweet/index.tsx`.
 - As informações dos _tweets_ podem ser obtidas por meio de uma requisição ao _endpoint_ `https://public-apis-473v4ntrr-felipemuller20.vercel.app/api/tweets`, que devem ser enviadas via _props_ para o componente `Tweet`.
+
+<details>
+<summary>retorno da API</summary><br />
+
+    ```json
+    [
+        {
+          "id": 1,
+          "owner": {
+            "name": "Trybe",
+            "username": "betrybe",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1574869347079692296/QpY7cGuV_400x400.jpg"
+          },
+          "commentsCount": 125,
+          "retweetsCount": 56,
+          "likesCount": 2500,
+          "tweet": "Fala tribo! Já visitaram a nova documentação do React?"
+        },
+        // ...
+    ]
+    ```
+</details>
+
 - Enquanto a requisição está sendo realizada, você deve indicar que as informações estão sendo carregadas.
 - Cada _tweet_ deverá apresentar o _tweet_ em si (ou seja, a mensagem) e as informações de quem o realizou (nome, _username_ e imagem do perfil);
   - O _username_ deverá ser um _link_ que, quando clicado, redirecionará para a página `/profile/username`. Por exemplo, em um _tweet_ da Trybe, ao clicar em `@betrybe`, a página deverá ser redirecionada para `/profile/betrybe`.
@@ -58,6 +81,32 @@ Esse componente será o responsável por renderizar as informações da rota `/`
 O componente `Profile` será o responsável por renderizar as informações da página `/profile/:username`. Essa página deve renderizar as informações do perfil selecionado, bem como todos os _tweets_ realizados por esse perfil.
 
 - As informações de todas as pessoas cadastradas podem ser acessadas por meio de uma requisição ao _endpoint_ `https://public-apis-473v4ntrr-felipemuller20.vercel.app/api/twitter-users`.
+
+<details>
+<summary>retorno da API</summary><br />
+
+    ```json
+   [
+        {
+          "name": "Trybe",
+          "username": "betrybe",
+          "id": 1,
+          "profilePicture": "https://pbs.twimg.com/profile_images/1574869347079692296/QpY7cGuV_400x400.jpg",
+          "backgroundPicture": "https://pbs.twimg.com/profile_banners/1133443092399493120/1664313179/1500x500",
+          "tweetsId": [
+            1,
+            14,
+            15
+          ],
+          "following": 100,
+          "followers": 20000,
+          "bio": "A escola mais orientada para o desenvolvimento de uma carreira de sucesso."
+        },
+        // ...
+    ]
+    ```
+</details>
+
 - Enquanto a requisição está sendo realizada, você deve indicar que as informações estão sendo carregadas.
 - Ao acessar a página, a aplicação deverá renderizar apenas informações do perfil que está na URL. Por exemplo, na rota `/profile/betrybe`, a página deverá renderizar as informações do perfil `@betrybe`.
 - As informações que deverão ser renderizadas são:
