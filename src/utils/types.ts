@@ -1,4 +1,4 @@
-export type TweetCard = {
+export type TweetType = {
   id: number,
   owner: {
     name: string,
@@ -11,7 +11,7 @@ export type TweetCard = {
   likesCount: number,
 };
 
-export type Users = {
+export type User = {
   id: number,
   name: string,
   username: string,

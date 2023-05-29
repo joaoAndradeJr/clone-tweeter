@@ -21,9 +21,11 @@ Ao iniciar este exercício, você concorda com as diretrizes do Código de Condu
 
 A aplicação deve possuir três rotas principais:
 
-- Rota `/`: deve renderizar o componente `Home`, que está no arquivo `/src/pages/index.tsx`.
-- Rota `/profile/:username`: deve renderizar o componente `Profile` que está no arquivo `/src/pages/index.tsx`.
+- Rota `/`: deve renderizar o componente `Home`.
+- Rota `/profile/:username`: deve renderizar o componente `Profile`.
 - Para qualquer outra rota não mapeada, deve ser renderizado um componente chamado `NotFound`.
+
+> Os componentes das páginas já estão criados e se encontram na pasta `/src/pages`
 
 > Não esqueça de utilizar o componente `BrowserRouter` pra criar as rotas
 >
