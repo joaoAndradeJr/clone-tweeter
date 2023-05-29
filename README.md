@@ -53,7 +53,7 @@ Esse componente será o responsável por renderizar as informações da rota `/`
 <details>
 <summary>retorno da API</summary><br />
 
-    ```json
+```json
     [
         {
           "id": 1,
@@ -69,7 +69,7 @@ Esse componente será o responsável por renderizar as informações da rota `/`
         },
         // ...
     ]
-    ```
+```
 </details>
 
 - Enquanto a requisição está sendo realizada, você deve indicar que as informações estão sendo carregadas.
@@ -87,26 +87,27 @@ O componente `Profile` será o responsável por renderizar as informações da p
 <details>
 <summary>retorno da API</summary><br />
 
-    ```json
-   [
-        {
-          "name": "Trybe",
-          "username": "betrybe",
-          "id": 1,
-          "profilePicture": "https://pbs.twimg.com/profile_images/1574869347079692296/QpY7cGuV_400x400.jpg",
-          "backgroundPicture": "https://pbs.twimg.com/profile_banners/1133443092399493120/1664313179/1500x500",
-          "tweetsId": [
-            1,
-            14,
-            15
-          ],
-          "following": 100,
-          "followers": 20000,
-          "bio": "A escola mais orientada para o desenvolvimento de uma carreira de sucesso."
-        },
-        // ...
-    ]
-    ```
+```json
+[
+    {
+      "name": "Trybe",
+      "username": "betrybe",
+      "id": 1,
+      "profilePicture": "https://pbs.twimg.com/profile_images/1574869347079692296/QpY7cGuV_400x400.jpg",
+      "backgroundPicture": "https://pbs.twimg.com/profile_banners/1133443092399493120/1664313179/1500x500",
+      "tweetsId": [
+        1,
+        14,
+        15
+      ],
+      "following": 100,
+      "followers": 20000,
+      "bio": "A escola mais orientada para o desenvolvimento de uma carreira de sucesso."
+    },
+    // ...
+]
+```
+
 </details>
 
 - Enquanto a requisição está sendo realizada, você deve indicar que as informações estão sendo carregadas.
