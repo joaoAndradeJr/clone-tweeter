@@ -48,7 +48,7 @@ Esse componente será o responsável por renderizar o menu de navegação da apl
 Esse componente será o responsável por renderizar as informações da rota `/`. Ao acessar a página, todos os tweets deverão ser renderizados.
 
 - Para renderizar os _tweets_, você deverá utilizar o componente `Tweet`, que está no arquivo `src/components/tweet/index.tsx`.
-- As informações dos _tweets_ podem ser obtidas por meio de uma requisição ao _endpoint_ `https://public-apis-473v4ntrr-felipemuller20.vercel.app/api/tweets`, que devem ser enviadas via _props_ para o componente `Tweet`.
+- As informações dos _tweets_ podem ser obtidas por meio de uma requisição ao _endpoint_ `https://tweets-api-olive.vercel.app/api/tweets`, que devem ser enviadas via _props_ para o componente `Tweet`.
 
 <details>
 <summary>retorno da API</summary><br />
@@ -82,7 +82,7 @@ Esse componente será o responsável por renderizar as informações da rota `/`
 
 O componente `Profile` será o responsável por renderizar as informações da página `/profile/:username`. Essa página deve renderizar as informações do perfil selecionado, bem como todos os _tweets_ realizados por esse perfil.
 
-- As informações de todas as pessoas cadastradas podem ser acessadas por meio de uma requisição ao _endpoint_ `https://public-apis-473v4ntrr-felipemuller20.vercel.app/api/twitter-users`.
+- As informações de todas as pessoas cadastradas podem ser acessadas por meio de uma requisição ao _endpoint_ `https://tweets-api-olive.vercel.app/api/twitter-users`.
 
 <details>
 <summary>retorno da API</summary><br />
