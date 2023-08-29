@@ -1,13 +1,15 @@
+import { NavLink, Outlet } from 'react-router-dom';
 import './layout.css';
 
 function Layout() {
   return (
     <div className="page">
       <nav className="nav">
-        {/* Adicionar aqui os links do menu de navegação */}
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/profile/betrybe">Profile</NavLink>
       </nav>
       <main>
-        {/* Está faltando algo aqui 👀 */}
+        <Outlet />
       </main>
     </div>
   );
